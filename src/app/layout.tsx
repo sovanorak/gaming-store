@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/global/navbar";
 import { Footer } from "@/components/global/footer";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +31,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <main className="flex flex-col mx-auto items-center justify-between">
-          <Navbar />
-          {children}
-          <Footer />
+          <NuqsAdapter>
+            <Navbar />
+            {children}
+            <Footer />
+          </NuqsAdapter>
         </main>
       </body>
     </html>

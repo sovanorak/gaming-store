@@ -1,4 +1,4 @@
-import { HomePageModule } from "@/modules/home-module";
+import { HomePageModule } from "@/modules/home/home-module";
 import { Suspense } from "react";
 
 export default function Home() {

@@ -30,13 +30,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="flex flex-col mx-auto items-center justify-between">
-          <NuqsAdapter>
-            <Navbar />
-            {children}
-            <Footer />
-          </NuqsAdapter>
-        </main>
+        <div className="flex flex-col items-center">
+          <Navbar />
+          <main className="flex flex-col mx-auto items-center justify-between">
+            <NuqsAdapter>{children}</NuqsAdapter>
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
